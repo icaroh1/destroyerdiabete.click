@@ -15,7 +15,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <title>Don't close or refresh this page...</title>
 
     <!-- Exit Popup -->
+<script type="text/javascript">
+    function exitPopup() {
+        var exitConfirmationMessage = "Tem certeza que deseja sair?";
+        var mobileDeviceRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
 
+        window.addEventListener("beforeunload", function(e) {
+            if (mobileDeviceRegex.test(navigator.userAgent)) {
+                (e || window.event).returnValue = exitConfirmationMessage; // Exibindo uma mensagem de confirmação para dispositivos móveis
+                return exitConfirmationMessage;
+            }
+        });
+    }
+    exitPopup();
+</script>
         <!-- Exit Popup -->
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
