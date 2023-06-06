@@ -72,14 +72,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       }(window, location));
     </script>
 
-<script type="text/javascript">
-window.onload = function() {
-  const queryString = window.location.search; 
-  const allAnchors = document.querySelectorAll('a');
-  allAnchors.forEach(function (anchor) { 
-    anchor.href = anchor.href + queryString;
-  })
+<script>
+var saveUTMtoCookie = function() {
+    var parts = location.href.substring(location.href.indexOf('?') + 1).split('&');
+    var data = {};
+    if (parts.length > 0) {
+        for (var i = 0; i < parts.length; i++) {
+            data[parts[i].split('=')[0]] = parts[i].split('=')[1];
+        }
+        for (var key in data) {
+            if (window.localStorage) {
+                localStorage.setItem(key, data[key]);
+            } else {
+                document.cookie = key + '=' + data[key] + ';max-age=86400;path=/';
+            }
+        }
+    }
+    
 }
+window.addEventListener('load', saveUTMtoCookie);
 </script>
 
 <!-- Back redirect -->
