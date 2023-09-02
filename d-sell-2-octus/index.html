@@ -18,6 +18,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MMB3FCW');</script>
 <!-- End Google Tag Manager -->
 
+<script>
+    !function () {
+        const query = window.location.search.substring(1)
+        const links = [...document.querySelectorAll('a')]
+        links.forEach(i => {
+            i.href += (i.href.includes('?') ? `&${query}` : `?${query}`)
+        })
+    }()
+</script>
+
     <script>
       window.__app = {
         visit_id: undefined,
@@ -575,7 +585,7 @@ We are currently experiencing very high demand. This exclusive discounted price 
 
     <center>
 
-        <script src="https://pay.octuspay.com/oneclickupsell.js"></script>
+        <script src="https://pay.octuspay.com/oneclickupsell.js?20230902"></script>
     <div style="text-align:center" id="upselljknFDnkjdfnuFDhjkF384">
         <button id="triggerofferjdomJnduSMNKF"
            style="background-color:#009b04;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #009b04;font-size:20px; margin-top:10px;

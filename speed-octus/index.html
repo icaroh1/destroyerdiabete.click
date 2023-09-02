@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <META NAME="robots" CONTENT="noindex,nofollow">
 
+<script>
+    !function () {
+        const query = window.location.search.substring(1)
+        const links = [...document.querySelectorAll('a')]
+        links.forEach(i => {
+            i.href += (i.href.includes('?') ? `&${query}` : `?${query}`)
+        })
+    }()
+</script>
+
 <meta property="og:locale" content="en_EN" />
 <meta property="og:type" content=video.other/>
 <meta property="og:title" content="Don't close or refresh this page..." />
@@ -104,7 +114,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
             <br>
 
-                <script src="https://pay.octuspay.com/oneclickupsell.js"></script>
+    <script src="https://pay.octuspay.com/oneclickupsell.js?20230902"></script>
     <div style="text-align:center" id="upselljknFDnkjdfnuFDhjkF384">
         <button id="triggerofferjdomJnduSMNKF"
            style="background-color:#009b04;padding:12px 16px;cursor:pointer;color:#FFFFFF;font-weight:600;border-radius:4px;border:1px solid #009b04;font-size:20px; margin-top:10px;
