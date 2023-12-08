@@ -11,10 +11,17 @@
 
 <script type="text/javascript">
 //<![CDATA[
-var url= 'https://editoraactual.tomticket.com/chat/balao/EP58156/3721984P02082023040036'
-+ '?ts=' + new Date().getTime()
-+ '&ref=' + document.URL;
-document.writeln('<script src="'+url+'" type="text/javascript"><\/script>');
+var ttChatLoaderS = document.createElement('script');
+document.tomticketChatLoaderScriptVersion = 2;
+ttChatLoaderS.src = 'https://editoraactual.tomticket.com/scripts-chat/chat.min.js'
++ '?id=EP58156'
++ '&account=3721984P02082023040036'
++ '&autoOpen=0'
++ '&hideWhenOffline=0'
++ '&d=editoraactual'
++ '&ts=' + new Date().getTime()
++ '&ref=' + encodeURIComponent(document.URL);
+document.body.appendChild(ttChatLoaderS);
 //]]>
 </script>
 
