@@ -3,6 +3,29 @@
   <head>
     <meta charset="utf-8">
 
+    <!-- parametro octoken -->
+<script>
+
+// Obtém a URL atual
+var urlAtual = window.location.href;
+
+// Verifica se a URL contém o parâmetro "octoken"
+if (urlAtual.includes('octoken=')) {
+    // Extrai o valor do parâmetro "octoken" da URL
+    var octoken = urlAtual.split('octoken=')[1].split('&')[0];
+
+    // Constrói a nova URL com o parâmetro "octoken"
+    var novaUrl = decodeURIComponent(octoken);
+
+    // Redireciona para a nova URL
+    window.location.href = novaUrl;
+} else {
+    // Se o parâmetro "octoken" não estiver presente, faça algo ou redirecione para outra página padrão, se necessário.
+    console.log('Parâmetro "octoken" não encontrado na URL.');
+}
+    
+</script>
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -195,7 +218,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }, 500); // 500 milliseconds = 0.5 seconds
 
         const octusUpsell9h3Dj32f = "OF-39b5d98f30";
-        var octusNextPagejd93jDiDmML3 = "https://destroyerdiabete.click/speed-octus/";
+        var octusNextPagejd93jDiDmML3 = "https://myjourney.click/sf/?sfunnel=21";
         var octusNextPageDownsellkfiEOncismK = "https://destroyerdiabete.click/d-sell-1-octus/";
         var textAcceptnijiejDEjnuOIUDFU = "YES! CONFIRM MY ORDER AND ACCESS NOW!";
         var textRejectniuiu3niuNUIEIU = "i don't care...";
